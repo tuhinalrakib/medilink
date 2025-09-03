@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
       >
         <Navbar />
         <ReduxProvider>
-          <main className="min-h-screen bg-[#1B2C1E]">
+          <main className="bg-[#1B2C1E]">
             {children}
           </main>
         </ReduxProvider>

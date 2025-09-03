@@ -5,6 +5,8 @@ import { setCredentials } from "@/features/auth/authSlice";
 import { useRegisterPatientMutation, useRegisterDoctorMutation } from "../../features/auth/authApi";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import Lottie from "lottie-react";
+import lottieFile from "../../../public/register.json"
 
 export default function RegisterPage() {
   const { register, handleSubmit, formState: { errors } } = useForm();
@@ -15,11 +17,11 @@ export default function RegisterPage() {
 
   const onSubmit = async (data) => {
     console.log(data)
-   
+
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-50 via-white to-indigo-100 px-4">
+    <div className="min-h-screen flex items-center mt-5 justify-center bg-gradient-to-br from-indigo-50 via-white to-indigo-100 px-4">
       <div className="w-full max-w-md bg-white shadow-xl rounded-2xl p-8">
         <h2 className="text-2xl font-bold text-center text-indigo-600 mb-6">Create an Account</h2>
 
@@ -90,6 +92,13 @@ export default function RegisterPage() {
           Already have an account?{" "}
           <a href="/login" className="text-indigo-600 hover:underline">Login</a>
         </p>
+      </div>
+      <div className="w-full lg:w-1/2 flex justify-center">
+        <Lottie
+          animationData={lottieFile}
+          loop
+          style={{ maxWidth: '400px', width: '100%' }}
+        />
       </div>
     </div>
   );
