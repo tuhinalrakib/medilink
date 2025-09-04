@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const authApi = createApi({
   reducerPath: "authApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://appointment-manager-node.onrender.com/api/v1",
+    baseUrl: "http://localhost:5000",
   }),
   endpoints: (builder) => ({
     login: builder.mutation({
