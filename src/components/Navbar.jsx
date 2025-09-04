@@ -22,9 +22,7 @@ export default function Navbar() {
   const navLinks = (
     <>
       <li><Link href="/" className="hover:bg-[#5C9966] p-2 duration-300 rounded-2xl">Home</Link></li>
-      <li><Link href="/" className="hover:bg-[#5C9966] p-2 duration-300 rounded-2xl">Doctors</Link></li>
-      <li><Link href="/" className="hover:bg-[#5C9966] p-2 duration-300 rounded-2xl">Appointment</Link></li>
-      <li><Link href="/" className="hover:bg-[#5C9966] p-2 duration-300 rounded-2xl">Contact</Link></li>
+      <li><Link href="/patient/dashboard" className="hover:bg-[#5C9966] p-2 duration-300 rounded-2xl">Dashboard</Link></li>
     </>
   );
 

@@ -44,9 +44,11 @@ export default function LoginPage() {
 
     try {
       const res = await login(formData).unwrap();
-      dispatch(setCredentials(res));
+      console.log(res.user)
+      dispatch(setCredentials({ token : res.token, user: res.user}));
       router.push(
-        formData.role === "DOCTOR" ? "/doctor/dashboard" : "/patient/dashboard"
+        // formData.role === "DOCTOR" ? "/doctor/dashboard" : "/patient/dashboard"
+        formData.role === "DOCTOR" ? "/" : "/"
       );
     } catch (error) {
       setErrors({ form: error?.data?.message || "Login failed" });
